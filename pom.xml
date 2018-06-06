@@ -17,6 +17,7 @@
         <module>Day6ReflectionProxyAnnotations</module>
         <module>Day7ClassLoaders</module>
         <module>Day8ModuleBuildToolsTesting</module>
+        <module>Day9Serialization</module>
     </modules>
 
     <dependencies>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="day1" />
+        <module name="Day2MainJavaClassesAndPackages" />
+        <module name="Day3JavaCollectionFramework" />
+        <module name="Day4Generics" />
+        <module name="Day5ExceptionHandling" />
+        <module name="Day6ReflectionProxyAnnotations" />
+        <module name="Day7ClassLoaders" />
+        <module name="Day8ModuleBuildToolsTesting" />
+        <module name="Day9Serialization" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="day1" target="1.8" />
+      <module name="Day2MainJavaClassesAndPackages" target="1.8" />
+      <module name="Day3JavaCollectionFramework" target="1.8" />
+      <module name="Day4Generics" target="1.8" />
+      <module name="Day5ExceptionHandling" target="1.8" />
+      <module name="Day6ReflectionProxyAnnotations" target="1.8" />
+      <module name="Day7ClassLoaders" target="1.8" />
+      <module name="Day8ModuleBuildToolsTesting" target="1.8" />
+      <module name="Day9Serialization" target="1.8" />
+      <module name="javaSchoolMaven" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
