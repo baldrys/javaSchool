@@ -18,6 +18,7 @@
         <module>Day7ClassLoaders</module>
         <module>Day8ModuleBuildToolsTesting</module>
         <module>Day9Serialization</module>
+        <module>Day10LambdaStreamAPI</module>
     </modules>
 
     <dependencies>
