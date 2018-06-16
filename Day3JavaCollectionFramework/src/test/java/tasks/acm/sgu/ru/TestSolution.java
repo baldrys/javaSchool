@@ -27,9 +27,9 @@ public class TestSolution {
         tasks.acm.sgu.ru.task2056.Solution.task2056(in, ps);
         String output = os.toString("UTF8");
 
-        assertEquals( output, "a\n" +
-                "aa\n" +
-                "aaa\n");
+        assertEquals( output, "a\r\n" +
+                "aa\r\n" +
+                "aaa\r\n");
     }
 
     @Test

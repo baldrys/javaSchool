@@ -33,15 +33,15 @@ public class TestPresentationTasks {
 
     @Test
     public void testTask3() throws FileNotFoundException {
-        Map<String, Integer> countOfWords;
-        Map<String, Integer> actualCountOfWords = new HashMap<String, Integer>(){
+        Map<String, Long> countOfWords;
+        Map<String, Long> actualCountOfWords = new HashMap<String, Long>(){
             {
-                put("p", 1);
-                put("qwerty",2);
-                put("zxcv",1);
-                put("asdf",1);
-                put("rtyu", 1);
-                put("iop",1);
+                put("p", 1L);
+                put("qwerty",2L);
+                put("zxcv",1L);
+                put("asdf",1L);
+                put("rtyu", 1L);
+                put("iop",1L);
             }
         };
         countOfWords = Solution.thirdTask(text);

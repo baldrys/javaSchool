@@ -1,46 +1,28 @@
 package tasks.acm.sgu.ru.task2056;
 
+import java.io.BufferedReader;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
+
+import static java.util.function.Function.identity;
+import static java.util.stream.Collectors.counting;
+import static java.util.stream.Collectors.groupingBy;
 
 // Найти слово, которое встречается в тексте наибольшее количество раз
 public class Solution {
     public static void task2056(InputStream in, PrintStream out) {
+        Map<String, Long> grouped = new BufferedReader(new InputStreamReader(in)).lines()
+                .map(w -> w.split(" "))
+                .flatMap(Arrays::stream)
+                .collect(groupingBy(identity(), counting()));
 
-        Scanner scanner;
-        HashMap<String, Integer> countOfWords = new HashMap<>();
-        ArrayList<String> listOfPopularWords = new ArrayList<>();
-        int maxNubmerOfWord = 1;
-        String word;
-
-        scanner = new Scanner(in);
-        while (scanner.hasNext()){
-            word = scanner.next().toLowerCase();
-            if (countOfWords.containsKey(word)){
-                countOfWords.put(word, countOfWords.get(word) + 1);
-            } else {
-                countOfWords.put(word, 1);
-            }
-
-            if (maxNubmerOfWord < countOfWords.get(word)){
-                maxNubmerOfWord = countOfWords.get(word);
-            }
-
-        }
-
-        for (HashMap.Entry<String, Integer> pair: countOfWords.entrySet()) {
-            if (pair.getValue() == maxNubmerOfWord){
-                listOfPopularWords.add(pair.getKey());
-            }
-        }
-        Collections.sort(listOfPopularWords);
-
-        for (String temp : listOfPopularWords) {
-            out.println(temp);
-        }
+        long max = grouped.values().stream().max(Comparator.naturalOrder()).get();
+        grouped.entrySet().stream()
+                .filter(e -> e.getValue() == max)
+                .map(Map.Entry::getKey)
+                .sorted()
+                .forEach(out::println);
     }
 }
