@@ -19,6 +19,8 @@
         <module>Day8ModuleBuildToolsTesting</module>
         <module>Day9Serialization</module>
         <module>Day10LambdaStreamAPI</module>
+        <module>Day11_12Multithreading</module>
+        <module>Day13JavaMemoryModel</module>
     </modules>
 
     <dependencies>
